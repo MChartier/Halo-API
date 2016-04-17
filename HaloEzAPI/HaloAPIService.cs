@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using HaloEzAPI.Abstraction.Enum;
 using HaloEzAPI.Limits;
@@ -14,7 +11,7 @@ using HaloEzAPI.Model.Response.Stats;
 
 namespace HaloEzAPI
 {
-    public class HaloAPIService : IHaloAPIService
+    public class HaloAPIService : IHaloApiService
     {
         private readonly ResponseProcessor _responseProcessor;
         private const int StatCacheExpiry = 1;
