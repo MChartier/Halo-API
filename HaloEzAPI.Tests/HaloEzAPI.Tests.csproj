@@ -101,9 +101,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HaloEzApi.Core\HaloEzApi.Core.csproj">
+      <Project>{6ca58868-4b9b-4697-b69f-a70e767b243b}</Project>
+      <Name>HaloEzApi.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HaloEzAPI\HaloEzAPI.csproj">
       <Project>{C545AEB4-3493-4875-BF21-7F94A026F10D}</Project>
       <Name>HaloEzAPI</Name>

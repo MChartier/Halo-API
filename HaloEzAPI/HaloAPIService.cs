@@ -7,12 +7,10 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using HaloEzAPI.Abstraction.Enum;
-using HaloEzAPI.Caching;
 using HaloEzAPI.Limits;
 using HaloEzAPI.Model.Response.Error;
 using HaloEzAPI.Model.Response.MetaData;
 using HaloEzAPI.Model.Response.Stats;
-using Newtonsoft.Json;
 
 namespace HaloEzAPI
 {

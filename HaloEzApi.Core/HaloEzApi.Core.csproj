@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CA58868-4B9B-4697-B69F-A70E767B243B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaloExApi.Core</RootNamespace>
+    <AssemblyName>HaloExApi.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\Enum\CommendationType.cs" />
+    <Compile Include="Abstraction\Enum\CreditResult.cs" />
+    <Compile Include="Abstraction\Enum\CropType.cs" />
+    <Compile Include="Abstraction\Enum\DeathDiposition.cs" />
+    <Compile Include="Abstraction\Enum\Difficulty.cs" />
+    <Compile Include="Abstraction\Enum\EnumResolver.cs" />
+    <Compile Include="Abstraction\Enum\Faction.cs" />
+    <Compile Include="Abstraction\Enum\Flair.cs" />
+    <Compile Include="Abstraction\Enum\FlexibleStatType.cs" />
+    <Compile Include="Abstraction\Enum\GameMode.cs" />
+    <Compile Include="Abstraction\Enum\KillerAgent.cs" />
+    <Compile Include="Abstraction\Enum\MedalType.cs" />
+    <Compile Include="Abstraction\Enum\MissionType.cs" />
+    <Compile Include="Abstraction\Enum\OwnerType.cs" />
+    <Compile Include="Abstraction\Enum\PlayerMatchResult.cs" />
+    <Compile Include="Abstraction\Enum\RarityType.cs" />
+    <Compile Include="Abstraction\Enum\ReqUseType.cs" />
+    <Compile Include="Abstraction\Enum\ResourceType.cs" />
+    <Compile Include="Abstraction\Enum\ResultCode.cs" />
+    <Compile Include="Abstraction\Enum\RewardSourceType.cs" />
+    <Compile Include="Abstraction\Enum\WeaponType.cs" />
+    <Compile Include="Abstraction\Interfaces\IDetail.cs" />
+    <Compile Include="Abstraction\Interfaces\IEquipmentDamageDealt.cs" />
+    <Compile Include="Abstraction\Interfaces\IGuidContentIds.cs" />
+    <Compile Include="Abstraction\Interfaces\IMatchVariants.cs" />
+    <Compile Include="Abstraction\Interfaces\IMeleeDamageDealt.cs" />
+    <Compile Include="Abstraction\Interfaces\IPlayerKDA.cs" />
+    <Compile Include="Abstraction\Interfaces\IPlayerStat.cs" />
+    <Compile Include="Abstraction\Interfaces\IRangeDamageDealt.cs" />
+    <Compile Include="Abstraction\Interfaces\IWinLoss.cs" />
+    <Compile Include="Caching\CacheManager.cs" />
+    <Compile Include="Converter\ScoreConverter.cs" />
+    <Compile Include="Converter\TimeSpanConverter.cs" />
+    <Compile Include="Endpoints.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="IHaloAPIService.cs" />
+    <Compile Include="Limits\RequestRateHttpClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseProcessorCore.cs" />
+    <Compile Include="Response\Error\CommonErrorMessages.cs" />
+    <Compile Include="Response\Error\HaloAPIError.cs" />
+    <Compile Include="Response\MetaData\BaseLevel.cs" />
+    <Compile Include="Response\MetaData\CampaignMission.cs" />
+    <Compile Include="Response\MetaData\Category.cs" />
+    <Compile Include="Response\MetaData\Commendation.cs" />
+    <Compile Include="Response\MetaData\CSRDesignation.cs" />
+    <Compile Include="Response\MetaData\CSRTier.cs" />
+    <Compile Include="Response\MetaData\Enemy.cs" />
+    <Compile Include="Response\MetaData\FlexibleStat.cs" />
+    <Compile Include="Response\MetaData\GameBaseVariant.cs" />
+    <Compile Include="Response\MetaData\GameVariant.cs" />
+    <Compile Include="Response\MetaData\Impulse.cs" />
+    <Compile Include="Response\MetaData\Level.cs" />
+    <Compile Include="Response\MetaData\Map.cs" />
+    <Compile Include="Response\MetaData\MapVariant.cs" />
+    <Compile Include="Response\MetaData\Medal.cs" />
+    <Compile Include="Response\MetaData\Playlist.cs" />
+    <Compile Include="Response\MetaData\RankReward.cs" />
+    <Compile Include="Response\MetaData\Requisition.cs" />
+    <Compile Include="Response\MetaData\RequisitionPack.cs" />
+    <Compile Include="Response\MetaData\Reward.cs" />
+    <Compile Include="Response\MetaData\Season.cs" />
+    <Compile Include="Response\MetaData\Skull.cs" />
+    <Compile Include="Response\MetaData\SpartanRank.cs" />
+    <Compile Include="Response\MetaData\SpriteLocation.cs" />
+    <Compile Include="Response\MetaData\TeamColor.cs" />
+    <Compile Include="Response\MetaData\Vehicle.cs" />
+    <Compile Include="Response\MetaData\Weapon.cs" />
+    <Compile Include="Response\Stats\ArenaPlayerStat.cs" />
+    <Compile Include="Response\Stats\ArenaPlaylistStat.cs" />
+    <Compile Include="Response\Stats\ArenaPostGameReport.cs" />
+    <Compile Include="Response\Stats\ArenaServiceRecord.cs" />
+    <Compile Include="Response\Stats\ArenaServiceRecordQueryResponse.cs" />
+    <Compile Include="Response\Stats\ArenaStats.cs" />
+    <Compile Include="Response\Stats\BasePlayerStat.cs" />
+    <Compile Include="Response\Stats\BaseServiceRecord.cs" />
+    <Compile Include="Response\Stats\CampaignMissionStat.cs" />
+    <Compile Include="Response\Stats\CampaignPlayerStat.cs" />
+    <Compile Include="Response\Stats\CampaignPostGameReport.cs" />
+    <Compile Include="Response\Stats\CampaignRunThroughStats.cs" />
+    <Compile Include="Response\Stats\CampaignServiceRecord.cs" />
+    <Compile Include="Response\Stats\CampaignServiceRecordQueryResponse.cs" />
+    <Compile Include="Response\Stats\CampaignStat.cs" />
+    <Compile Include="Response\Stats\CreditsEarned.cs" />
+    <Compile Include="Response\Stats\CSR.cs" />
+    <Compile Include="Response\Stats\CustomGameServiceRecord.cs" />
+    <Compile Include="Response\Stats\CustomGameServiceRecordQueryResponse.cs" />
+    <Compile Include="Response\Stats\CustomGameStat.cs" />
+    <Compile Include="Response\Stats\CustomPostGameReport.cs" />
+    <Compile Include="Response\Stats\Event.cs" />
+    <Compile Include="Response\Stats\FlexibleStats.cs" />
+    <Compile Include="Response\Stats\GameBaseVariantStat.cs" />
+    <Compile Include="Response\Stats\Id.cs" />
+    <Compile Include="Response\Stats\Kill.cs" />
+    <Compile Include="Response\Stats\KillDetail.cs" />
+    <Compile Include="Response\Stats\Link.cs" />
+    <Compile Include="Response\Stats\LinkItem.cs" />
+    <Compile Include="Response\Stats\Match.cs" />
+    <Compile Include="Response\Stats\MatchCompletedDate.cs" />
+    <Compile Include="Response\Stats\MatchDetails.cs" />
+    <Compile Include="Response\Stats\MatchEvent.cs" />
+    <Compile Include="Response\Stats\MatchPlayer.cs" />
+    <Compile Include="Response\Stats\MedalAward.cs" />
+    <Compile Include="Response\Stats\MetaCommendationDelta.cs" />
+    <Compile Include="Response\Stats\MetRequirement.cs" />
+    <Compile Include="Response\Stats\Player.cs" />
+    <Compile Include="Response\Stats\PlayerMatchBreakdown.cs" />
+    <Compile Include="Response\Stats\PlayerMatches.cs" />
+    <Compile Include="Response\Stats\ProgressiveCommendationDelta.cs" />
+    <Compile Include="Response\Stats\RewardSetObject.cs" />
+    <Compile Include="Response\Stats\RoundStat.cs" />
+    <Compile Include="Response\Stats\ScenarioStat.cs" />
+    <Compile Include="Response\Stats\ServiceRecordResult.cs" />
+    <Compile Include="Response\Stats\StatCounter.cs" />
+    <Compile Include="Response\Stats\StatsEnemy.cs" />
+    <Compile Include="Response\Stats\StatTimelapse.cs" />
+    <Compile Include="Response\Stats\Team.cs" />
+    <Compile Include="Response\Stats\TeamStat.cs" />
+    <Compile Include="Response\Stats\TopGameBaseVariant.cs" />
+    <Compile Include="Response\Stats\Variant.cs" />
+    <Compile Include="Response\Stats\WarzonePlayerStat.cs" />
+    <Compile Include="Response\Stats\WarzonePostGameReport.cs" />
+    <Compile Include="Response\Stats\WarzoneServiceRecord.cs" />
+    <Compile Include="Response\Stats\WarzoneServiceRecordQueryResponse.cs" />
+    <Compile Include="Response\Stats\WarzoneStat.cs" />
+    <Compile Include="Response\Stats\WeaponId.cs" />
+    <Compile Include="Response\Stats\WeaponKillDetail.cs" />
+    <Compile Include="Response\Stats\WorldLocation.cs" />
+    <Compile Include="Response\Stats\XpInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\HaloEzAPI\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\HaloEzAPI\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\HaloEzAPI\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\HaloEzAPI\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\HaloEzAPI\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\HaloEzAPI\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\HaloEzAPI\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\HaloEzAPI\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

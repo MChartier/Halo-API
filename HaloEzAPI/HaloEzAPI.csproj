@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -58,144 +58,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstraction\Enum\CommendationType.cs" />
-    <Compile Include="Abstraction\Enum\CreditResult.cs" />
-    <Compile Include="Abstraction\Enum\CropType.cs" />
-    <Compile Include="Abstraction\Enum\DeathDiposition.cs" />
-    <Compile Include="Abstraction\Enum\Difficulty.cs" />
-    <Compile Include="Abstraction\Enum\EnumResolver.cs" />
-    <Compile Include="Abstraction\Enum\Faction.cs" />
-    <Compile Include="Abstraction\Enum\Flair.cs" />
-    <Compile Include="Abstraction\Enum\FlexibleStatType.cs" />
-    <Compile Include="Abstraction\Enum\GameMode.cs" />
-    <Compile Include="Abstraction\Enum\KillerAgent.cs" />
-    <Compile Include="Abstraction\Enum\MedalType.cs" />
-    <Compile Include="Abstraction\Enum\MissionType.cs" />
-    <Compile Include="Abstraction\Enum\OwnerType.cs" />
-    <Compile Include="Abstraction\Enum\PlayerMatchResult.cs" />
-    <Compile Include="Abstraction\Enum\RarityType.cs" />
-    <Compile Include="Abstraction\Enum\ReqUseType.cs" />
-    <Compile Include="Abstraction\Enum\ResourceType.cs" />
-    <Compile Include="Abstraction\Enum\ResultCode.cs" />
-    <Compile Include="Abstraction\Enum\RewardSourceType.cs" />
-    <Compile Include="Abstraction\Enum\WeaponType.cs" />
-    <Compile Include="Abstraction\Interfaces\IDetail.cs" />
-    <Compile Include="Abstraction\Interfaces\IEquipmentDamageDealt.cs" />
-    <Compile Include="Abstraction\Interfaces\IGuidContentIds.cs" />
-    <Compile Include="Abstraction\Interfaces\IMatchVariants.cs" />
-    <Compile Include="Abstraction\Interfaces\IMeleeDamageDealt.cs" />
-    <Compile Include="Abstraction\Interfaces\IPlayerKDA.cs" />
-    <Compile Include="Abstraction\Interfaces\IPlayerStat.cs" />
-    <Compile Include="Abstraction\Interfaces\IRangeDamageDealt.cs" />
-    <Compile Include="Abstraction\Interfaces\IWinLoss.cs" />
-    <Compile Include="Caching\CacheManager.cs" />
-    <Compile Include="Converter\TimeSpanConverter.cs" />
-    <Compile Include="Converter\ScoreConverter.cs" />
-    <Compile Include="Endpoints.cs" />
     <Compile Include="HaloAPIService.cs" />
-    <Compile Include="IHaloAPIService.cs" />
-    <Compile Include="Limits\RequestRateHttpClient.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Model\Response\MetaData\BaseLevel.cs" />
-    <Compile Include="Model\Response\MetaData\CampaignMission.cs" />
-    <Compile Include="Model\Response\MetaData\Category.cs" />
-    <Compile Include="Model\Response\MetaData\Commendation.cs" />
-    <Compile Include="Model\Response\MetaData\CSRDesignation.cs" />
-    <Compile Include="Model\Response\MetaData\CSRTier.cs" />
-    <Compile Include="Model\Response\MetaData\Enemy.cs" />
-    <Compile Include="Model\Response\MetaData\FlexibleStat.cs" />
-    <Compile Include="Model\Response\MetaData\GameBaseVariant.cs" />
-    <Compile Include="Model\Response\MetaData\GameVariant.cs" />
-    <Compile Include="Model\Response\MetaData\Impulse.cs" />
-    <Compile Include="Model\Response\MetaData\Level.cs" />
-    <Compile Include="Model\Response\MetaData\Map.cs" />
-    <Compile Include="Model\Response\MetaData\MapVariant.cs" />
-    <Compile Include="Model\Response\MetaData\Medal.cs" />
-    <Compile Include="Model\Response\MetaData\Playlist.cs" />
-    <Compile Include="Model\Response\MetaData\RankReward.cs" />
-    <Compile Include="Model\Response\MetaData\Requisition.cs" />
-    <Compile Include="Model\Response\MetaData\RequisitionPack.cs" />
-    <Compile Include="Model\Response\MetaData\Reward.cs" />
-    <Compile Include="Model\Response\MetaData\Season.cs" />
-    <Compile Include="Model\Response\MetaData\Skull.cs" />
-    <Compile Include="Model\Response\MetaData\SpartanRank.cs" />
-    <Compile Include="Model\Response\MetaData\SpriteLocation.cs" />
-    <Compile Include="Model\Response\MetaData\TeamColor.cs" />
-    <Compile Include="Model\Response\MetaData\Vehicle.cs" />
-    <Compile Include="Model\Response\MetaData\Weapon.cs" />
-    <Compile Include="Model\Response\Stats\ArenaPlayerStat.cs" />
-    <Compile Include="Model\Response\Stats\ArenaPlaylistStat.cs" />
-    <Compile Include="Model\Response\Stats\ArenaPostGameReport.cs" />
-    <Compile Include="Model\Response\Stats\ArenaServiceRecord.cs" />
-    <Compile Include="Model\Response\Stats\ArenaStats.cs" />
-    <Compile Include="Model\Response\Stats\CampaignMissionStat.cs" />
-    <Compile Include="Model\Response\Stats\CampaignPlayerStat.cs" />
-    <Compile Include="Model\Response\Stats\CampaignPostGameReport.cs" />
-    <Compile Include="Model\Response\Stats\CampaignRunThroughStats.cs" />
-    <Compile Include="Model\Response\Stats\CampaignServiceRecord.cs" />
-    <Compile Include="Model\Response\Stats\CampaignServiceRecordQueryResponse.cs" />
-    <Compile Include="Model\Response\Stats\CampaignStat.cs" />
-    <Compile Include="Model\Response\Stats\CreditsEarned.cs" />
-    <Compile Include="Model\Response\Stats\CSR.cs" />
-    <Compile Include="Model\Response\Stats\CustomGameServiceRecord.cs" />
-    <Compile Include="Model\Response\Stats\CustomGameServiceRecordQueryResponse.cs" />
-    <Compile Include="Model\Response\Stats\CustomGameStat.cs" />
-    <Compile Include="Model\Response\Stats\CustomPostGameReport.cs" />
-    <Compile Include="Model\Response\Stats\Event.cs" />
-    <Compile Include="Model\Response\Stats\Link.cs" />
-    <Compile Include="Model\Response\Stats\LinkItem.cs" />
-    <Compile Include="Model\Response\Stats\MatchEvent.cs" />
-    <Compile Include="Model\Response\Stats\StatsEnemy.cs" />
-    <Compile Include="Model\Response\Error\CommonErrorMessages.cs" />
-    <Compile Include="Model\Response\Error\HaloAPIError.cs" />
-    <Compile Include="Model\Response\Stats\FlexibleStats.cs" />
-    <Compile Include="Model\Response\Stats\GameBaseVariantStat.cs" />
-    <Compile Include="Model\Response\Stats\Id.cs" />
-    <Compile Include="Model\Response\Stats\Kill.cs" />
-    <Compile Include="Model\Response\Stats\KillDetail.cs" />
-    <Compile Include="Model\Response\Stats\Match.cs" />
-    <Compile Include="Model\Response\Stats\MatchCompletedDate.cs" />
-    <Compile Include="Model\Response\Stats\MatchDetails.cs" />
-    <Compile Include="Model\Response\Stats\MatchPlayer.cs" />
-    <Compile Include="Model\Response\Stats\MedalAward.cs" />
-    <Compile Include="Model\Response\Stats\PlayerMatchBreakdown.cs" />
-    <Compile Include="Model\Response\Stats\PlayerMatches.cs" />
-    <Compile Include="Model\Response\Stats\MetaCommendationDelta.cs" />
-    <Compile Include="Model\Response\Stats\MetRequirement.cs" />
-    <Compile Include="Model\Response\Stats\Player.cs" />
-    <Compile Include="Model\Response\Stats\BasePlayerStat.cs" />
-    <Compile Include="Model\Response\Stats\ProgressiveCommendationDelta.cs" />
-    <Compile Include="Model\Response\Stats\RewardSetObject.cs" />
-    <Compile Include="Model\Response\Stats\RoundStat.cs" />
-    <Compile Include="Model\Response\Stats\BaseServiceRecord.cs" />
-    <Compile Include="Model\Response\Stats\ArenaServiceRecordQueryResponse.cs" />
-    <Compile Include="Model\Response\Stats\ScenarioStat.cs" />
-    <Compile Include="Model\Response\Stats\ServiceRecordResult.cs" />
-    <Compile Include="Model\Response\Stats\StatCounter.cs" />
-    <Compile Include="Model\Response\Stats\StatTimelapse.cs" />
-    <Compile Include="Model\Response\Stats\Team.cs" />
-    <Compile Include="Model\Response\Stats\TeamStat.cs" />
-    <Compile Include="Model\Response\Stats\TopGameBaseVariant.cs" />
-    <Compile Include="Model\Response\Stats\Variant.cs" />
-    <Compile Include="Model\Response\Stats\WarzonePlayerStat.cs" />
-    <Compile Include="Model\Response\Stats\WarzonePostGameReport.cs" />
-    <Compile Include="Model\Response\Stats\WarzoneServiceRecord.cs" />
-    <Compile Include="Model\Response\Stats\WarzoneServiceRecordQueryResponse.cs" />
-    <Compile Include="Model\Response\Stats\WarzoneStat.cs" />
-    <Compile Include="Model\Response\Stats\WeaponId.cs" />
-    <Compile Include="Model\Response\Stats\WeaponKillDetail.cs" />
-    <Compile Include="Model\Response\Stats\WorldLocation.cs" />
-    <Compile Include="Model\Response\Stats\XpInfo.cs" />
-    <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
+    <Compile Include="IHaloApiService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Request\" />
+    <ProjectReference Include="..\HaloEzApi.Core\HaloEzApi.Core.csproj">
+      <Project>{6ca58868-4b9b-4697-b69f-a70e767b243b}</Project>
+      <Name>HaloEzApi.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

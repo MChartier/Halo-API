@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloEzAPI", "HaloEzAPI.csproj", "{C545AEB4-3493-4875-BF21-7F94A026F10D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloEzAPI.Tests", "..\HaloEzAPI.Tests\HaloEzAPI.Tests.csproj", "{92572AFE-81DC-4220-B4A0-50AA8D00999E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloEzApi.Core", "..\HaloEzApi.Core\HaloEzApi.Core.csproj", "{6CA58868-4B9B-4697-B69F-A70E767B243B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{92572AFE-81DC-4220-B4A0-50AA8D00999E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92572AFE-81DC-4220-B4A0-50AA8D00999E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92572AFE-81DC-4220-B4A0-50AA8D00999E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA58868-4B9B-4697-B69F-A70E767B243B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA58868-4B9B-4697-B69F-A70E767B243B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA58868-4B9B-4697-B69F-A70E767B243B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA58868-4B9B-4697-B69F-A70E767B243B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
